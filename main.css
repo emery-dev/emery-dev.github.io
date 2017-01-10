@@ -204,7 +204,7 @@ footer>.container>.pull-left>h2{
 }
 
 .about-me-img {
-    padding:100px 0 0 25px;
+    padding:100px 0 0 0;
     border-radius:5px;
     max-height: 600px;
 }
@@ -322,6 +322,9 @@ h1>small {
     padding-left:20px;
 }
 
+.back-button {
+    font-size: 42px;
+}
 
 /* contact form */
 

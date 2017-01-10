@@ -50,17 +50,20 @@
             <div class="menuSpacer col-md-12"></div>
             <div id="contactpage" class="jumbotron" data-viewport="3">
                 <h1 style="padding-bottom:50px;">Get in touch &#x1F48C;</h1>
-                <form name="contactform" method="post" action="send_mail.php">
+                <form action="https://formspree.io/eandrewzap@gmail.com" method="POST">
                     <div class="container center_div form-group">
-                        <input class="form-control" type="text" placeholder="full name *" name="name" maxlength="25" required>
+                        <input class="form-control" type="text" placeholder="full name *" name="name" maxlength="25" required />
                         </br>
-                        <input class="form-control" type="text" placeholder="email *" name="email" maxlength="20" required>
+                        <input class="form-control" type="text" placeholder="email *" name="email" maxlength="20" required />
                         </br>
-                        <input class="form-control" type="text" name="telephone" placeholder="(000)-000-1234" maxlength="15">
+                        <input class="form-control" type="text" name="telephone" placeholder="(000)-000-1234" maxlength="15" />
                         </br>
                         <textarea class="form-control" id="comment" name="comments" placeholder="your message" maxlength="1000" cols="25" rows="6" required></textarea>
                         </br>
-                        <button class="btn btn-default form-control" type="submit">Submit</button>
+                        <input type="hidden" name="_next" value="emery-dev.github.io/thanks.html" />
+                        <input type="hidden" name="_subject" value="New web interest:" />
+                
+                        <button class="btn btn-default form-control" type="submit" value="Send">Submit</button>
                         </br>
                         <h3 class="text-center">&#x1F44A;</h3>
                     </div>
