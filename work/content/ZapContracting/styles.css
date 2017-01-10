@@ -1,0 +1,407 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot');
+	src: url('fonts/icomoon.eot?iefix') format('eot'),
+	     url('fonts/icomoon.woff') format('woff'),
+	     url('fonts/icomoon.ttf') format('truetype'),
+	     url('fonts/icomoon.svg#webfont') format('svg');
+}
+
+body {
+	font-family:'Roboto Slab', sans serif, Arial;
+	font-size:16px;
+	color:#666666;
+	font-weight:400;
+	letter-spacing: 1px;
+}
+
+p{
+	line-height:30px;
+	font-weight:400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding:20px;
+	color:#dde0e8;
+}
+
+/* end universal styles */
+
+/*-- Nav --*/
+
+.navbar {
+	display: inline;
+}
+
+.navbar-brand {
+	width:125px;
+	height:70px;
+	padding-top:0;
+	margin: 15px 0px 15px 0px;
+	background:url('imgs/Zap_logo.png') no-repeat;
+	background-size:cover;
+	text-indent:-9999px;
+}
+
+.navbar-default {
+	background: none;
+	border: none;
+	padding:0;
+}
+
+.navbar-default .navbar-nav>li>a {
+	font-size:14px;
+	font-weight:600;
+	color:#dde0e8;
+	text-align:center;
+	padding:10px 0;
+}
+
+.navbar-default .navbar-nav>li>a:hover .navbar-nav>li>a:focus {
+	color:#000;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #2f2f2f;
+	background: none;
+	outline: 0;
+}
+
+.navbar-toggle{
+	margin-top:0;
+	border:none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background: none;
+	outline: none;
+}
+
+.navbar-default .navbar-collapse {
+	margin-top:14px;
+	border: 1px solid rgba(204,212,233,0.2);
+	border-radius:3px;
+	background: rgba(255,255,255, 0.1);
+	box-shadow: none;
+	padding-top:16px;
+}
+
+
+/* Jumbotron */
+
+.jumbotron {
+	background: #2169F9 url('imgs/NYC.png') fixed no-repeat;
+	background-size: cover;
+	background-position:center center;
+	max-height:1000px;
+	padding-top:60px;
+	padding-bottom:60px;
+	margin: 0;
+}
+
+.jumbotron h1 {
+	color:#dde0e8;
+	margin-bottom:40px;
+}
+
+.jumbotron h1 span {
+	color:#F6D400;
+}
+
+.jumbotron h3{
+	padding:0;
+	font-weight:300;
+}
+
+.jumbotron .btn-primary {
+	border-radius: 3px;
+	border: 1px solid #fff;
+	background:rgba(255,255,255,0.05);
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top:50px;
+	padding:16px 30px;
+}
+
+.jumbotron .btn-primary:hover {
+	background: rgba(255,255,255,0.2);
+}
+
+/* -- Services -- */
+
+.services {
+	padding:40px 20px;
+	border-bottom:1px solid #e3e3e3;
+}
+
+.services h4 {
+	color:#333333;
+	text-transform: uppercase;
+	font-size:22px;
+	padding:10px;
+}
+
+.services p {
+	margin-bottom:50px;
+	font-family: 'Montserrat', Times;
+	font-weight:100;
+}
+
+.icon-sprite{
+	display:inline-block;
+	font-family: "icomoon";
+}
+
+.icon-sprite.sprite-consult::before{
+	font-size:34px;
+	color:#333;
+	content:"\e602";
+}
+
+.icon-sprite.sprite-dev::before{
+	font-size:34px;
+	color:#333;
+	content:"\e600";
+}
+
+.icon-sprite.sprite-build::before{
+	font-size:34px;
+	color:#333;
+	content:"\e601";
+}
+
+/* -- Our Work -- */
+
+.our-work {
+	background: rgba(191,192,190,0.1) url('imgs/nyc_subway.png') no-repeat;
+	background-size: cover;
+	background-position:center center;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.heading {
+	padding:50px 0 30px 0;
+}
+
+.heading h1 {
+	color: #333333;
+	font-size: 50px;
+	background:url('imgs/heading.png') no-repeat;
+	background-position: center bottom;
+	padding: 0 0 25px 0;
+	
+}
+
+.control-right {
+	padding: 50px 0 0 0;
+}
+
+.btn, .btn-default {
+	text-transform: uppercase;
+	font-weight: 700;
+	border: 1px solid rgba(33, 105, 249, .5);
+	border-radius:3px;
+	padding:8px 10px;
+	background-color:transparent;
+	
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+	background-color:rgba(33, 105, 249, 1);
+	color: #dde0e8;
+	border:1px solid rgba(51, 51, 51, .5);
+	border:none;
+}
+
+.gallery {
+	width:100%;
+	margin: 0 auto;
+}
+
+.gallery-item {
+	position:relative;
+	float:left;
+	padding:0 10px 20px 10px;
+}
+
+.gallery-item img {
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+.carousel-indicators {
+	position: absolute;
+	bottom: 100%;
+	margin-bottom: -44px;
+	left: 0;
+	z-index: 15;
+	width: 100%;
+	padding-left: 0;
+	margin-left: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.carousel-indicators li {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin: 0 0 0 -6px;
+	text-indent: 0;
+	cursor: pointer;
+	border: 1px solid #3498db;
+	border-radius: 0px;
+	color: #333333;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 11px 10px;
+}
+
+.carousel-indicators li:first-child{
+	border-radius:3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+}
+
+.carousel-indicators li:last-child{
+	border-radius:0 3px 3px 0;
+	-webkit-border-radius:0 3px 3px 0;
+	-moz-border-radius:0 3px 3px 0;
+}
+
+.carousel-indicators .active {
+	width: auto;
+	height: auto;
+	margin: 0 0 0 -6px;
+	border-color: #3498db;
+	color:#3498db;
+	background: transparent;
+	position: relative;
+	z-index: 10;
+}
+
+.modal-content {
+	border-radius:4px;
+}
+
+.modal-body {
+	background-color:rgba(33, 105, 249, .1);
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	margin: 0 auto;
+	padding:0;
+}
+
+/* About Us */
+
+.about-us {
+	background-color:rgba(51, 51, 51, 0.1)
+}
+
+.about-us h1 {
+	margin:0 0;
+}
+
+.about-us h3 {
+	color:#333;
+	font-size: 28px;
+	padding-left:0;
+	text-align: center;
+	margin-top:0;
+	margin-bottom:20px;
+}
+
+.about-us p {
+	font-weight:300;
+	line-height: 1.6;
+	margin-top:30px;
+}
+
+#about-1, #about-2 {
+	margin:20px 0 50px 0;
+}
+
+#divider {
+	width:80%;
+	height:auto;
+	border-bottom:1px solid #bdb9b9;
+	margin:0 auto;
+	margin-bottom:50px;
+}
+
+/* Call to action */
+
+.cta {
+	background-color: rgba(246, 212, 0, .7);
+	padding: 40px 0;
+}
+
+.cta h2, .cta h5{
+	color:#333;
+	padding:0;
+}
+
+.cta h2 {
+	font-size: 40px;
+}
+
+.cta a:hover {
+	border-bottom:3px solid #428bca;
+	color:#333;
+	text-decoration: none;
+}
+
+.phone, .email {
+	margin-top:20px;
+}
+
+.icon-sprite.sprite-phone::before {
+	font-size:25px;
+	color:#428bca;
+	content: "\e603";
+}
+
+.icon-sprite.sprite-email::before {
+	font-size:25px;
+	color:#428bca;
+	content: "\e604";
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px){
+	.navbar-nav {float: right; margin:24px 20px 24px 0px;}
+	.navbar-default .navbar-collapse {padding-top:0; border:none; background:none;}
+	.navbar-header{;margin-left:80px;}
+	.navbar-default .navbar-nav>li>a {font-size:18px;font-weight:400;}
+	.navbar-nav > li {padding-right:25px;}
+	.navbar-nav > li > a {line-height:.5;}
+	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+		border-bottom: 2px solid #2f2f2f;}
+	.our-work h1 {padding:0 0 20px 0; margin: 0 0 30px 0;}
+}
+
+@media (min-width:992px) {
+	.navbar-default .navbar-collapse {border: none; background:none;}
+	.jumbotron h1 {font-size: 80px;}
+	#imgCarousel .carousel-indicators {margin-bottom:85px;padding-right:30px;text-align:right;}
+	
+}
+
+@media (max-width:992px) {
+	#about-2 {display:table;}
+	#content1 {display:table-footer-group;}
+	#content2 {display:table-header-group;}
+	.carousel-indicators {position:relative; margin-bottom:15px; clear:both;}
+	.gallery-item {padding:0 5px 10px 5px;}
+}
+
+@media (max-width:768px) {
+	.navbar-default .navbar-collapse {margin-top:0; padding-top:0;}
+	.navbar-default h2 {padding-top:12px;}
+	.about-us p {padding:0 20px;}
+}

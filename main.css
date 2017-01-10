@@ -1,0 +1,364 @@
+html, body {
+    height:100%;
+    font-family: 'Lato';
+}
+
+
+
+/* TOP NAV BAR */
+.clearfix{ 
+    overflow: auto;
+}
+
+header#header {
+    height: 70px;
+    background-color: #60a4e8;
+}
+
+.nav {
+    position: relative;
+    padding: 12px 100px 0px 15px;
+    margin: 0 auto;
+}
+
+/* Left side */
+
+ul#navLeft {
+    float:left;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul#navLeft h3,
+ul#navLeft a{
+    color: #efefef;
+    font-family: 'Lato';
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 22px;
+    margin:auto;
+    margin-top:8px;
+}
+
+
+/* Right side */
+
+ul#navRight {
+    float: right;
+    margin-top:10px;
+    padding: 0px;
+}
+
+#navRight .btn-link,
+#navRight a{
+    color: #D3E7FC;
+    font-size: 15px;
+    text-transform: lowercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px 15px;
+}
+
+.nav #navRight a:hover,
+#navRight button:hover {
+    color: #2F79C6;
+}
+
+.nav #navRight li {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.nav #navRight li:after {
+    content:'';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.nav #navRight li:hover:after {
+    width:75%;
+    background:#2F79C6;
+    text-decoration: none;
+}
+
+.menuSpacer {
+    height:60px;
+    background-color: #509ce8;
+
+}
+
+.bottomSpacer {
+    height:100px;
+    background-color: aliceblue;
+    display:relative;
+}
+
+/* INDEX */
+.jumbotron {
+    font-family: 'Lato';
+    height: 750px;
+    background-color:#4F94DC;
+    background-position: 50% 15%;
+    padding:0px;
+    margin-bottom: 0px;
+}
+
+
+
+#homepage>h1,
+#contactpage>h1,
+#workpage>h1{
+    color: #efefef;
+    letter-spacing: .5px;
+    font-size: 45px;
+    padding-top: 120px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#homepage>h1{
+    font-size:60px;
+}
+
+#homepage>h3 {
+    color: #D3E7FC;
+    letter-spacing: .5px;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* footer */
+
+footer {
+    font:'Lato';
+    color:#efefef;
+    opacity: 1;
+    height: 70px;
+    background-color: #60a4e8;
+    padding: 0px 5% 0 5%;
+    position: relative;
+}
+
+footer>.container>.pull-right>a{
+    padding:0 10px 0 10px;
+}
+
+footer>.container>.pull-left>h2{
+    font-family: 'Lato';
+    font-size:25px;
+}
+
+.fa {
+    color: #efefef;
+    font-size:40px;
+}
+
+.fa:hover {
+    color: #a8a8a8;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#footer>a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#footer>a:hover {
+    color: #70726F;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* about me */
+
+.about-me {
+    height:700px;
+    color:#efefef;
+}
+
+.about-me>h3{
+    font-size:30px;
+    padding:20px 0 20px 0;
+}
+
+.about-me>p {
+    padding-top:10px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.about-me-img {
+    padding:100px 0 0 25px;
+    border-radius:5px;
+    max-height: 600px;
+}
+
+.portfolio-cta {
+    color: #60a4e8;
+    background-color: #efefef;
+    width:100%;
+    margin:0 auto;
+    padding: 0;
+}
+
+.portfolio-cta>.row>h2 {
+    margin-bottom:20px;
+}
+
+/* work page */
+
+#workpage>h1{
+    padding-bottom: 5%;
+}
+
+.work-item{
+    padding: 0 6% 10% 6%;
+    
+}
+
+#workpage>.container{
+    background-color:#4F94DC;
+}
+
+.work-item>h3,
+.work-item>a>h3{
+    font-size:40px;
+    color: #333;
+    display: block;
+    margin:20px 0 0 220px;
+    padding-left:25px;
+}
+
+.work-item>h3>small{
+    color:#efefef;
+}
+
+
+/* portfolio projects page */
+
+.portfolio-container>.row>.col-md-8>.img-responsive {
+    max-height: 500px;
+    max-width: 750px;
+}
+
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* -- Carousel Styling -- */
+
+#carousel-example-generic {
+    padding-top:25px;
+}
+
+.carousel-inner,
+img.img-responsive {
+  border-radius: 5px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+h1>small {
+    color: #efefef;
+}
+
+.portfolio-item-description>h2 {
+    font-size:16px;
+}
+
+.portfolio-item-description>h3 {
+    color:#333;
+    text-decoration: underline;
+}
+
+.portfolio-item-description>p,
+.portfolio-item-description>ul>li {
+    font-size: 20px;
+    font-weight: 300;
+    color: #efefef;
+    list-style-type: disc;
+}
+
+.portfolio-item-description>ul {
+    padding-left:20px;
+}
+
+
+/* contact form */
+
+.center_div{
+    margin: 0 auto;
+    width:40%;
+}
+
+/* media queries */
+
+@media (max-width:992px){
+    #footer>.container>.pull-left>h2 {
+        padding-top:5px;
+        font-size:15px;
+    }
+    
+    .content>.jumbotron{
+        margin-top:-20px;
+    }
+    
+    .menuSpacer:nth-of-type(1) {
+        margin-bottom:20px;
+    }
+    
+    .about-me-img{
+        display:none;
+    }
+    
+    #workpage{
+        height:1100px;
+    }
+    
+    #workpage>h1{
+        padding-top:60px;
+    }
+    
+}
