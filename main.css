@@ -114,11 +114,9 @@ ul#navRight {
     margin-bottom: 0px;
 }
 
-
-
 #homepage>h1,
 #contactpage>h1,
-#workpage>h1{
+#work-page>h1 {
     color: #efefef;
     letter-spacing: .5px;
     font-size: 45px;
@@ -225,16 +223,15 @@ footer>.container>.pull-left>h2{
 
 /* work page */
 
-#workpage>h1{
+#work-page>h1{
     padding-bottom: 5%;
 }
 
 .work-item{
     padding: 0 6% 10% 6%;
-    
 }
 
-#workpage>.container{
+#p>.container{
     background-color:#4F94DC;
 }
 
@@ -335,6 +332,12 @@ h1>small {
 
 /* media queries */
 
+@media (max-width:1180px){
+    #about-me-page {
+        height:800px;
+    }
+}
+
 @media (max-width:992px){
     #footer>.container>.pull-left>h2 {
         padding-top:5px;
@@ -349,16 +352,49 @@ h1>small {
         margin-bottom:20px;
     }
     
+    #about-me-page{
+        height:800px;
+    }
+    
+    #about-me-img{
+        display:none;
+    }
+    
     .about-me-img{
         display:none;
     }
     
-    #workpage{
+    #work-page{
         height:1100px;
     }
     
-    #workpage>h1{
+    #work-page>h1{
         padding-top:60px;
     }
     
+    #portfolio-item-page{
+        height:1000px;
+    }
+    
+    h1.page-header{
+        font-size:48px;
+    }    
+}
+
+@media (max-width:991px){
+    #about-me-page{
+        height:700px;
+    }
+}
+
+@media (max-width:668px){
+    #about-me-page{
+        height:750px;
+    }
+}
+
+@media (max-width:558px){
+    #about-me-page{
+        height:900px;
+    }
 }
