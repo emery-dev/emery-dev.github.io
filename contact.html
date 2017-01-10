@@ -51,21 +51,24 @@
             <div id="contactpage" class="jumbotron" data-viewport="3">
                 <h1 style="padding-bottom:50px;">Get in touch &#x1F48C;</h1>
                 <div class="container center_div form-group">
-                    <form action="https://formspree.io/eandrewzap@gmail.com" method="POST">
-                        <input class="form-control" type="text" placeholder="full name *" name="name" maxlength="25" required />
-                        </br>
-                        <input class="form-control" type="text" placeholder="email *" name="email" maxlength="20" required />
-                        </br>
-                        <input class="form-control" type="text" name="telephone" placeholder="(000)-000-1234" maxlength="15" />
-                        </br>
-                        <textarea class="form-control" id="comment" name="comments" placeholder="your message" maxlength="1000" cols="25" rows="6" required></textarea>
-                        </br>
-                        <input type="hidden" name="_next" value="emery-dev.github.io/thanks.html" />
-                        <input type="hidden" name="_subject" value="New web interest:" />
+                    <form method="POST" action="//http://formspree.io/eandrewzap@gmail.com">
+                        <input type="text" name="name" class="form-control" placeholder="full name *" maxlength="25" required />
+                        <br/>
+                        <input type="text" name="email" class="form-control" placeholder="email *" maxlength="20" required />
+                        <br/>
+                        <textarea name="message" class="form-control" placeholder="your message*" maxlength="1000" cols="25" rows="6" required></textarea>
+                        <br/>
+                        <!--<input type="hidden" name="_next" value="emery-dev.github.io/thanks.html" />
+                        <input type="hidden" name="_subject" value="New web interest:" /> -->
                         <input type="submit" value="Send" class="btn btn-default form-control">
-                        </br>
-                        <h3 class="text-center">&#x1F44A;</h3>
+                        
                     </form>
+                     <form method="POST" action="//http://formspree.io/eandrewzap@gmail.com">
+                        <input type="email" name="email" placeholder="Your email">
+                        <textarea name="message" placeholder="Your message"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <h3 class="text-center">&#x1F44A;</h3>
                 </div>
             </div>
             <div class="menuSpacer col-md-12"></div>
