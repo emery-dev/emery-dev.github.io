@@ -3,36 +3,31 @@ html, body {
     font-family: 'Lato';
 }
 
-
-
 /* TOP NAV BAR */
+
 .clearfix{ 
     overflow: auto;
 }
 
-header#header {
-    height: 70px;
-    background-color: #60a4e8;
-}
-
 .nav {
+    height: inherit;
+    background-color: #60a4e8;
     position: relative;
-    padding: 12px 100px 0px 15px;
     margin: 0 auto;
 }
 
-/* Left side */
-
-ul#navLeft {
-    float:left;
+#header-main{
+    height:60px;
 }
 
-ul li {
-    list-style: none;
+.navbar-inverse,
+.navbar-brand,
+.navbar-inverse .navbar-brand {
+    color:#efefef;
 }
 
-ul#navLeft h3,
-ul#navLeft a{
+.navbar-brand,
+.navbar-brand>a{
     color: #efefef;
     font-family: 'Lato';
     text-decoration: none;
@@ -40,16 +35,21 @@ ul#navLeft a{
     font-weight: 400;
     font-size: 22px;
     margin:auto;
-    margin-top:8px;
 }
 
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+    background-color: #ddd;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-toggle{
+    border:none;
+}
 
 /* Right side */
 
-ul#navRight {
-    float: right;
-    margin-top:10px;
-    padding: 0px;
+#navRight{
+    padding-top:10px;
 }
 
 #navRight .btn-link,
@@ -70,10 +70,10 @@ ul#navRight {
     color: #2F79C6;
 }
 
-.nav #navRight li {
-    display: inline-block;
-    position: relative;
-    padding-bottom: 3px;
+
+
+.navbar-collapse.in{
+    overflow-y: visible;
 }
 
 .nav #navRight li:after {
@@ -95,7 +95,7 @@ ul#navRight {
 .menuSpacer {
     height:60px;
     background-color: #509ce8;
-
+    overflow: visible;
 }
 
 .bottomSpacer {
@@ -335,7 +335,7 @@ h1>small {
 
 /* media queries */
 
-@media (max-width:1180px){
+@media (min-width:1200px){
     #about-me-page {
         height:800px;
     }
@@ -387,6 +387,21 @@ h1>small {
 @media (max-width:991px){
     #about-me-page{
         height:700px;
+    }
+}
+
+@media (max-width : 768px) {
+    #header-main{
+        height:inherit;
+    }
+    .navbar-collapse{
+        padding:0px;
+    } 
+    #navRight a{
+        padding:15px 0px;
+    }
+    #navRight>li>a{
+        font-size:22px;
     }
 }
 
