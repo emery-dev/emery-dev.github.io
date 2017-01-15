@@ -47,7 +47,9 @@
             <div id="contactpage" class="jumbotron" data-viewport="4">
                 <h1 style="padding-bottom:50px;">Get in touch &#x1F48C;</h1>
                 <div class="container center_div form-group">
-                    <form method="POST" action="//http://formspree.io/eandrewzap@gmail.com">
+                    
+                    
+                    <form id="contact-form" method="POST" action="http://formspree.io/eandrewzap@gmail.com">
                         <input type="text" name="name" class="form-control" placeholder="full name *" maxlength="25" required />
                         <br/>
                         <input type="text" name="email" class="form-control" placeholder="email *" maxlength="20" required />
@@ -56,7 +58,7 @@
                         <br/>
                         <input type="hidden" name="_next" value="emery-dev.github.io/thanks.html" />
                         <input type="hidden" name="_subject" value="New web interest:" />
-                        <input type="submit" value="Send" class="btn btn-default form-control">
+                        <input id="send-button" type="submit" value="Send" class="btn btn-default form-control">
                     </form>
                     <h3 class="text-center">&#x1F44A;</h3>
                 </div>
@@ -78,6 +80,34 @@
             </div>
         </footer>
     </div>
+    <script>
+        var contactForm = document.querySelector('#contact-form'),
+        inputName = contactForm.querySelector('[name="name"]'),
+        inputEmail = contactForm.querySelector('[name="email"]'),
+        inputMessage = contactForm.querySelector('[name="message"]'),
+        sendButton = contactForm.querySelector('#send-button');
+
+        sendButton.addEventListener('click', function(event){
+          event.preventDefault(); // prevent the form to do the post.
+
+          sendButton.value = 'Sending..';
+
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', '//formspree.io/eandrewzap@gmail.com', true);
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+          xhr.onloadend = function (res) {
+            if (res.target.status === 200){
+              sendButton.value = 'Message sent!';
+            } else {
+              sendButton.value = 'Error!';
+            }
+          }
+
+          xhr.send("name= \n" + inputName.value + "\n --- EMAIL= ---\n" + inputEmail.value + "\n --- MESSAGE= ---\n" + inputMessage.value);
+        });
+    </script>
 </body>
 
 </html>
