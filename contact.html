@@ -49,14 +49,14 @@
                 <div class="container center_div form-group">
                     
                     
-                    <form id="contact-form">
+                    <form id="contact-form" method="POST" action="http://formspree.io/eandrewzap@gmail.com">
                         <input type="text" name="name" class="form-control" placeholder="full name *" maxlength="25" required />
                         <br/>
                         <input type="text" name="email" class="form-control" placeholder="email *" maxlength="20" required />
                         <br/>
                         <textarea name="message" class="form-control" placeholder="your message*" maxlength="1000" cols="25" rows="6" required></textarea>
                         <br/>
-                        <input id="send-button" type="submit" value="Send" class="btn btn-default form-control">
+                        <input id="send-button" type="submit" value="Send" onClick="sendNote()" class="btn btn-default form-control">
                     </form>
                     <h3 class="text-center">&#x1F44A;</h3>
                 </div>
@@ -81,12 +81,13 @@
     <script>
         window.onload = function() {
             if (localStorage.getItem("HasCodeRun") === null) {
-                window.location.href="https://www.emery-dev.github.io/contact.html";
+                window.location.href="http://www.emery-dev.github.io/contact.html";
                 localStorage.setItem("HasCodeRun", true);
             }
         }
     </script>
     <script>
+        function sendNote() {
         var contactForm = document.querySelector('#contact-form'),
         inputName = contactForm.querySelector('[name="name"]'),
         inputEmail = contactForm.querySelector('[name="email"]'),
@@ -112,6 +113,7 @@
           }
 
           xhr.send("name= \n" + inputName.value + "\n --- EMAIL= ---\n" + inputEmail.value + "\n --- MESSAGE= ---\n" + inputMessage.value);
+        }
         });
     </script>
 </body>
