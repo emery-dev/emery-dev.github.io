@@ -11,6 +11,35 @@
     <script src="transition/smoothTransition.js"></script>
     <link rel="stylesheet" href="transition/style.css">
     <link rel="stylesheet" href="main.css">
+    <script>
+        var contactForm = document.querySelector('#contact-form'),
+        inputName = contactForm.querySelector('[name="name"]'),
+        inputEmail = contactForm.querySelector('[name="email"]'),
+        inputMessage = contactForm.querySelector('[name="message"]'),
+        sendButton = contactForm.querySelector('#send-button');
+
+        sendButton.addEventListener('click', function(event){
+          event.preventDefault(); // prevent the form to do the post.
+
+          sendButton.value = 'Sending..';
+
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', '//formspree.io/eandrewzap@gmail.com', true);
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+          xhr.onloadend = function (res) {
+            if (res.target.status === 200){
+              sendButton.value = 'Message sent!';
+            } else {
+              sendButton.value = 'Error!';
+            }
+          }
+
+          xhr.send("name= \n" + inputName.value + "\n --- EMAIL= ---\n" + inputEmail.value + "\n --- MESSAGE= ---\n" + inputMessage.value);
+        });
+        }
+    </script>
 
     <title>emery.home</title>
     <link rel="shortcut icon" href="https://d30y9cdsu7xlg0.cloudfront.net/png/36684-200.png" type="image/x-icon" />

@@ -12,14 +12,7 @@
     <script src="transition/smoothTransition.js"></script>
     <link rel="stylesheet" href="transition/style.css">
     <link rel="stylesheet" href="main.css">
-    <script>
-        window.onload = function() {
-            if (localStorage.getItem("HasCodeRun") === null) {
-                window.location.href="http://www.emery-dev.github.io/contact.html";
-                localStorage.setItem("HasCodeRun", true);
-            }
-        }
-    </script>
+ 
     <script>
         var contactForm = document.querySelector('#contact-form'),
         inputName = contactForm.querySelector('[name="name"]'),
@@ -47,6 +40,7 @@
 
           xhr.send("name= \n" + inputName.value + "\n --- EMAIL= ---\n" + inputEmail.value + "\n --- MESSAGE= ---\n" + inputMessage.value);
         });
+        }
     </script>
 
     <title>emery.contact</title>
