@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="https://d30y9cdsu7xlg0.cloudfront.net/png/36684-200.png" type="image/x-icon" />
 </head>
 
-<body onload="load()">
+<body>
     <div id="main">
         <nav id="header-main" class="nav navbar-inverse">
             <div class="container-fluid">
@@ -79,13 +79,12 @@
         </footer>
     </div>
     <script>
-        function load(){
-            var counter = 0;
-            if (counter == 0) {
-                window.location.href="https://emery-dev.github.io/contact.html";
-                counter = 1;
-                }
+        window.onload = function() {
+            if (localStorage.getItem("HasCodeRun") === null) {
+                window.location.href="https://www.emery-dev.github.io/contact.html";
+                localStorage.setItem("HasCodeRun", true);
             }
+        }
     </script>
     <script>
         var contactForm = document.querySelector('#contact-form'),
