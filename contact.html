@@ -12,8 +12,78 @@
     <script src="transition/smoothTransition.js"></script>
     <link rel="stylesheet" href="transition/style.css">
     <link rel="stylesheet" href="main.css">
- 
+
+    <title>emery.contact</title>
+    <link rel="shortcut icon" href="https://d30y9cdsu7xlg0.cloudfront.net/png/36684-200.png" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="main">
+        <nav id="header-main" class="nav navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="index.html" data-target="0">emery andrew</a>
+                </div>
+                <div id="mynav" class="collapse navbar-collapse" >
+                    <ul id="navRight" class="nav navbar-nav navbar-right">
+                        <li class="text-center"><a href="about.html" data-target="1">about</a></li>
+                        <li class="text-center"><a href="work/work.html" data-target="2">work</a></li>
+                        <li class="text-center"><a href="blog.html" data-target="3">blog</a></li>
+                        <li class="text-center"><a href="contact.html" data-target="4" id="contact-link">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Nav -->
+
+        <div class="sceneElement content">
+            <div class="menuSpacer col-md-12"></div>
+            <div id="contactpage" class="jumbotron" data-viewport="4">
+                <h1 style="padding-bottom:50px;">Get in touch &#x1F48C;</h1>
+                <div class="container center_div form-group">
+                    <form id="contact-form" method="POST" action="http://formspree.io/eandrewzap@gmail.com">
+                        <input type="text" name="name" class="form-control" placeholder="full name *" maxlength="25" required />
+                        <br/>
+                        <input type="text" name="email" class="form-control" placeholder="email *" maxlength="20" required />
+                        <br/>
+                        <textarea name="message" class="form-control" placeholder="your message*" maxlength="1000" cols="25" rows="6" required></textarea>
+                        <br/>
+                        <input id="send-button" type="submit" value="Send" class="btn btn-default form-control">
+                    </form>
+                    <h3 class="text-center">&#x1F44A;</h3>
+                </div>
+            </div>
+            <div class="menuSpacer col-md-12"></div>
+        </div>
+        <footer class="clearfix" id="footer">
+            <div class="container">
+                <div style="height:inherit; padding-top:15px" class="pull-right">
+                    <a target="_blank" href="https://www.facebook.com/emery.andrew.13"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/emery.a_/"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/emery-andrew-719864b9"><i class="fa fa-linkedin"></i></a>
+                    <a target="_blank" href="https://github.com/emery-dev/"><i class="fa fa-github"></i></a>
+                    <a target="_blank" href="https://www.flickr.com/photos/135753813@N02/"><i class="fa fa-flickr"></i></a>
+                </div>
+                <div class="pull-left">
+                    <h2>All Rights Reserved &copy; 2017 emery-andrew.com </h2>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script>
+        //brute force for formspring
+        var contactButton = document.querySelector("#contact-link");
+        contactButton.addEventListener('click', function(event) {
+           window.location.href = "http://emery-dev.github.io/contact.html";
+        });    
+
+        if (window.location.href == "http://emery-dev.github.io/contact.html") {
         var contactForm = document.querySelector('#contact-form'),
         inputName = contactForm.querySelector('[name="name"]'),
         inputEmail = contactForm.querySelector('[name="email"]'),
@@ -40,71 +110,8 @@
 
           xhr.send("name= \n" + inputName.value + "\n --- EMAIL= ---\n" + inputEmail.value + "\n --- MESSAGE= ---\n" + inputMessage.value);
         });
+        }
     </script>
-
-    <title>emery.contact</title>
-    <link rel="shortcut icon" href="https://d30y9cdsu7xlg0.cloudfront.net/png/36684-200.png" type="image/x-icon" />
-</head>
-
-<body>
-    <div id="main">
-        <nav id="header-main" class="nav navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span> 
-                    </button>
-                    <a class="navbar-brand" href="index.html" data-target="0">emery andrew</a>
-                </div>
-                <div id="mynav" class="collapse navbar-collapse" >
-                    <ul id="navRight" class="nav navbar-nav navbar-right">
-                        <li class="text-center"><a href="about.html" data-target="1">about</a></li>
-                        <li class="text-center"><a href="work/work.html" data-target="2">work</a></li>
-                        <li class="text-center"><a href="blog.html" data-target="3">blog</a></li>
-                        <li class="text-center"><a href="contact.html" data-target="4">contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- End Nav -->
-
-        <div class="sceneElement content">
-            <div class="menuSpacer col-md-12"></div>
-            <div id="contactpage" class="jumbotron" data-viewport="4">
-                <h1 style="padding-bottom:50px;">Get in touch &#x1F48C;</h1>
-                <div class="container center_div form-group">
-                    <form id="contact-form" method="POST" action="http://formspree.io/eandrewzap@gmail.com">
-                        <input type="text" name="name" class="form-control" placeholder="full name *" maxlength="25" required />
-                        <br/>
-                        <input type="text" name="email" class="form-control" placeholder="email *" maxlength="20" required />
-                        <br/>
-                        <textarea name="message" class="form-control" placeholder="your message*" maxlength="1000" cols="25" rows="6" required></textarea>
-                        <br/>
-                        <input id="send-button" type="submit" value="Send" onClick="sendNote()" class="btn btn-default form-control">
-                    </form>
-                    <h3 class="text-center">&#x1F44A;</h3>
-                </div>
-            </div>
-            <div class="menuSpacer col-md-12"></div>
-        </div>
-        <footer class="clearfix" id="footer">
-            <div class="container">
-                <div style="height:inherit; padding-top:15px" class="pull-right">
-                    <a target="_blank" href="https://www.facebook.com/emery.andrew.13"><i class="fa fa-facebook"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/emery.a_/"><i class="fa fa-instagram"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/emery-andrew-719864b9"><i class="fa fa-linkedin"></i></a>
-                    <a target="_blank" href="https://github.com/emery-dev/"><i class="fa fa-github"></i></a>
-                    <a target="_blank" href="https://www.flickr.com/photos/135753813@N02/"><i class="fa fa-flickr"></i></a>
-                </div>
-                <div class="pull-left">
-                    <h2>All Rights Reserved &copy; 2017 emery-andrew.com </h2>
-                </div>
-            </div>
-        </footer>
-    </div>
 </body>
 
 </html>
