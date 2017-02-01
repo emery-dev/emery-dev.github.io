@@ -128,7 +128,8 @@ body {
 
 #homepage>h1,
 #contactpage>h1,
-#work-page>h1 {
+#work-page>h1,
+#blogpage>h1 {
     color: #efefef;
     letter-spacing: .5px;
     font-size: 45px;
@@ -343,6 +344,27 @@ h1>small {
     margin: 0 auto;
     width:40%;
     max-width: 40%;
+}
+
+/* BLOG */
+
+.post {
+  padding: 10px 50px 10px 50px;
+  background-color: rgba(100,200,100,0.5);
+  margin: 25px 25px 10px 25px;
+  border-radius: 5px;
+}
+
+#blogpage>h1{
+  margin-bottom: 60px;
+}
+
+#blog-item>a>h3{
+  margin-top:10px;
+}
+
+.list-group-item {
+  margin: 10px 100px 15px 100px;
 }
 
 /* media queries */
