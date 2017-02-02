@@ -351,7 +351,7 @@ h1>small {
 .post {
   position:relative;
   top:100px;
-  padding: 10px 50px 10px 50px;
+  padding: 10px 50px 80px 50px;
   background-color: rgba(100,200,100,0.5);
   margin: 0px 25px 10px 25px;
   border-radius: 5px;
