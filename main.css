@@ -221,6 +221,10 @@ footer>.container>.pull-left>h2{
     max-height: 600px;
 }
 
+#about-me-page {
+  padding: 0;
+}
+
 .portfolio-cta {
     color: #60a4e8;
     background-color: #efefef;
