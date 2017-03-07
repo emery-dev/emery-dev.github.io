@@ -267,6 +267,11 @@ footer>.container>.pull-left>h2{
 
 /* portfolio projects page */
 
+.portfolio-container>.row>.col-md-8>.container {
+  width:95%;
+  padding-bottom: 20px;
+}
+
 .portfolio-container>.row>.col-md-8>.img-responsive {
     max-height: 500px;
     max-width: 750px;
