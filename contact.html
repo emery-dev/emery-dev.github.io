@@ -34,17 +34,13 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html" data-target="0">emery andrew</a>
                 </div>
                 <div id="mynav" class="collapse navbar-collapse" >
                     <ul id="navRight" class="nav navbar-nav navbar-right">
-                      <li class="text-center"><a href="about.html" data-target="1">about</a></li>
-                      <li class="text-center"><a href="work/work.html" data-target="2">work</a></li>
-                      <li class="text-center"><a href="contact.html" data-target="3" id="contact-link">contact</a></li>
-                      <li class="text-center"><a href="https://emery-dev.github.io/blog/index" data-target="4">blog</a></li>
+                      <li class="text-center"><a href="work/work.html" data-target="1">work</a></li>
+                      <li class="text-center"><a href="contact.html" data-target="2" id="contact-link">contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,19 +49,19 @@
 
         <div class="sceneElement content">
             <div class="menuSpacer col-md-12"></div>
-            <div id="contactpage" class="jumbotron" data-viewport="3">
-                <h1 style="padding-bottom:50px;">Get in touch &#x1F48C;</h1>
-                <div style="max-width:40%;" class="container center_div form-group">
+            <div id="contactpage" class="jumbotron" data-viewport="2">
+                <h1 style="padding-bottom:50px;padding-top:100px;">let's talk</h1>
+                <div class="center_div form-group contact-form">
                     <form id="contact-form" method="POST" action="https://formspree.io/eandrewzap@gmail.com">
-                        <input type="text" name="name" class="form-control" placeholder="full name *" maxlength="25" required />
+                        <input type="text" name="name" class="form-control" placeholder="name" maxlength="25" required />
                         <br/>
-                        <input type="text" name="email" class="form-control" placeholder="email *" maxlength="20" required />
+                        <input type="text" name="email" class="form-control" placeholder="email" maxlength="20" required />
                         <br/>
-                        <textarea name="message" class="form-control" placeholder="your message*" maxlength="1000" cols="25" rows="6" required></textarea>
-                        <br/>
+                        <textarea name="message" class="form-control" placeholder="your message" maxlength="1000" cols="25" rows="6" required></textarea>
+                        <label>*ensure you're on https</label>
                         <input id="send-button" type="submit" value="Send" class="btn btn-default form-control">
                     </form>
-                    <h3 class="text-center">&#x1F44A;</h3>
+                    <h3 class="text-center thumbs">&#x1F44A;</h3>
                 </div>
             </div>
         </div>
@@ -112,6 +108,7 @@
               xhr.onloadend = function (res) {
                 if (res.target.status === 200){
                   sendButton.value = 'Message sent!';
+                  document.getElementsByClassName('thumbs').textContent = '&#x1F44D;';
                 } else {
                   sendButton.value = 'Error!';
                 }

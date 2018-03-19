@@ -133,13 +133,20 @@ body {
     color: #efefef;
     letter-spacing: .5px;
     font-size: 45px;
-    padding-top: 120px;
+    padding-top: 100px;
     text-align: center;
     margin: 0 auto;
 }
 
 #homepage>h1{
-    font-size:60px;
+    font-size: 60px;
+    padding-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    #homepage > h1 {
+        font-size: 84px;
+    }
 }
 
 #homepage>h3 {
@@ -147,9 +154,22 @@ body {
     letter-spacing: .5px;
     font-weight: bold;
     font-size: 25px;
-    padding-top: 40px;
+    padding-top: 0px;
     text-align: center;
     margin: 0 auto;
+}
+
+#homepage > h3:first-of-type {
+    padding-top: 40px;
+}
+
+#homepage > h3:last-of-type {
+    padding-bottom: 40px;
+}
+
+#homepage > img {
+    max-width: 285px;
+    margin: 25px auto 0;
 }
 
 /* footer */
@@ -264,6 +284,12 @@ footer>.container>.pull-left>h2{
     color:#efefef;
 }
 
+.work-item > h2 {
+    font-size: 54px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 /* portfolio projects page */
 
@@ -349,10 +375,14 @@ h1>small {
 
 /* contact form */
 
+label {
+    color: #d3d3d3;
+}
+
 .center_div{
     margin: 0 auto;
-    width:40%;
     max-width: 40%;
+    width: 100%;
 }
 
 /* BLOG */
@@ -387,6 +417,14 @@ h1>small {
 }
 
 @media (max-width:992px){
+    #homepage > h1 {
+        font-size: 90px !important;
+    }
+
+    #homepage > img {
+        margin: 100px auto 70px;
+    }
+
     #footer>.container>.pull-left>h2 {
         padding-top:5px;
         font-size:15px;
@@ -418,7 +456,7 @@ h1>small {
 
     #work-page>h1,
     #contactpage>h1{
-        padding-top:60px;
+        padding-top:120px !important;
     }
 
     #portfolio-item-page{
@@ -427,6 +465,19 @@ h1>small {
 
     h1.page-header{
         font-size:48px;
+    }
+
+    .center_div {
+        max-width: 80%;
+    }
+
+    .form-control {
+        height: 54px;
+        font-size: 34px;
+    }
+
+    .thumbs {
+        font-size: 64px;
     }
 }
 
